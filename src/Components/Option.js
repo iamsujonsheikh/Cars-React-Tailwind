@@ -18,6 +18,16 @@ const Option = () => {
                     loop
         />
         </div>
+
+
+        {/* fixed option */}
+         <div className='hidden absolute top-[80%] right-[25%] left-[25%] space-x-4 md:flex justify-center'>
+
+            <button className='border rounded-full bg-gray-500 bg-opacity-30 p-1 font-semibold text-gray-300 text-lg w-full hover:bg-opacity-50'>RIDE</button>
+
+            <button className='border rounded-full bg-gray-500 bg-opacity-30 p-1 font-semibold text-gray-300 text-lg w-full hover:bg-opacity-50'>DRIVE</button>
+
+        </div>
     </section>
   )
 }
