@@ -17,23 +17,23 @@ const Navbar = () => {
   return (
     <section  className='fixed z-10 w-full flex justify-between items-center px-4 h-14'>
              {/* logo section */}
-        <div className='text-3xl font-bold text-slate-800 cursor-pointer'>
+        <div className='text-3xl font-bold text-slate-300 cursor-pointer'>
             Cars.
         </div>
 
          {/* navigation section */}
-         <ul className='hidden md:flex space-x-6 font-medium uppercase'>
+         <ul className='hidden md:flex space-x-6 font-medium uppercase text-slate-200'>
 
             <li className='cursor-pointer'>
-            <Link to="power" spy={true} smooth={true} offset={50} duration={500}>Power</Link>
+            <Link to="power" spy={true} smooth={true} offset={-0} duration={500}>Power</Link>
             </li>
 
             <li className='cursor-pointer'>
-            <Link to="speed" spy={true} smooth={true} offset={50} duration={500}>Speed</Link>
+            <Link to="speed" spy={true} smooth={true} offset={-0} duration={500}>Speed</Link>
             </li>
 
             <li className='cursor-pointer'>
-            <Link to="handle" spy={true} smooth={true} offset={50} duration={500}>Handling</Link>
+            <Link to="handle" spy={true} smooth={true} offset={-0} duration={500}>Handling</Link>
             </li>
 
             <li className='cursor-pointer'>
@@ -61,7 +61,7 @@ const Navbar = () => {
         {/* icon section */}
         <ul className='md:hidden cursor-pointer' onClick={handleNavOpen}>
             {
-            (!open) ? <AiOutlineMenuUnfold size={25}/> : <AiOutlineClose size={25}/>
+            (!open) ? <AiOutlineMenuUnfold className='text-slate-300' size={25}/> : <AiOutlineClose className='text-slate-300' size={25}/>
             }
 
         {/* mobile device navbar section */}
@@ -106,7 +106,14 @@ const Navbar = () => {
             
         </ul>
 
-        
+         {/* fixed option */}
+        <div className='hidden absolute top-[800%] right-[25%] left-[25%] space-x-4 md:flex justify-center'>
+
+            <button className='border rounded-full bg-gray-500 bg-opacity-30 p-1 font-semibold text-gray-300 text-lg w-full hover:bg-opacity-50'>RIDE</button>
+
+            <button className='border rounded-full bg-gray-500 bg-opacity-30 p-1 font-semibold text-gray-300 text-lg w-full hover:bg-opacity-50'>DRIVE</button>
+
+        </div>
 
     </section>
   )
